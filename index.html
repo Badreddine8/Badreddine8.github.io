@@ -6,8 +6,8 @@
 <body>
     
 <!-- Add 2 buttons -->
-<button onclick="loadData1( data1 )">Dataset 1</button>
-<button onclick="loadData( data2 )">Dataset 2</button>
+<button onclick="loadData1()">Dataset 1</button>
+<button onclick="loadData2()">Dataset 2</button>
 
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
@@ -22,7 +22,7 @@
 <script>
 
 
-   function fun1(){
+   function loadData1(){
     $.ajax({
         url : 'http://zekri123.pythonanywhere.com/data1',
         type : 'GET',
@@ -46,9 +46,9 @@
      });
 
    }  
-   function fun2(){
+   function loadData2(){
     $.ajax({
-        url : 'http://zekri123.pythonanywhere.com/data1',
+        url : 'http://zekri123.pythonanywhere.com/data2',
         type : 'GET',
         dataType : 'json',
         success : function(code_html, statut){ 
